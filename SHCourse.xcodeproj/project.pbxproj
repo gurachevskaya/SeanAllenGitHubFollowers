@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A5522E2253470C100486416 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E1253470C100486416 /* Follower.swift */; };
 		9A5522E42534718300486416 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E32534718300486416 /* User.swift */; };
+		9A5522E72534943200486416 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E62534943200486416 /* ErrorMessage.swift */; };
+		9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E925349BA800486416 /* NetworkManager.swift */; };
 		9AC0B58A252F3BCC00FD8AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */; };
 		9AC0B58C252F3BCC00FD8AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */; };
 		9AC0B594252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B592252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		9A5522E1253470C100486416 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		9A5522E32534718300486416 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9A5522E62534943200486416 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		9A5522E925349BA800486416 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9AC0B586252F3BCC00FD8AB7 /* SHCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9A5522E52534942000486416 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9A5522E62534943200486416 /* ErrorMessage.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9A5522E825349B9700486416 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9A5522E925349BA800486416 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		9AC0B57D252F3BCC00FD8AB7 = {
 			isa = PBXGroup;
 			children = (
@@ -110,11 +130,14 @@
 		9AC0B588252F3BCC00FD8AB7 /* SHCourse */ = {
 			isa = PBXGroup;
 			children = (
+				9A5522E825349B9700486416 /* Managers */,
+				9A5522E52534942000486416 /* Utilities */,
 				9A5522E0253470B200486416 /* Model */,
-				9AC0B5C525304D1A00FD8AB7 /* Support */,
 				9AC0B5C425304CBB00FD8AB7 /* Extensions */,
 				9AC0B5C325304C8C00FD8AB7 /* Custom Views */,
 				9AC0B5C225304C4700FD8AB7 /* Screens */,
+				9AC0B5C525304D1A00FD8AB7 /* Support */,
+				9AC0B59A252F3BD100FD8AB7 /* Info.plist */,
 			);
 			path = SHCourse;
 			sourceTree = "<group>";
@@ -165,7 +188,6 @@
 				9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */,
 				9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */,
 				9AC0B597252F3BD100FD8AB7 /* LaunchScreen.storyboard */,
-				9AC0B59A252F3BD100FD8AB7 /* Info.plist */,
 				9AC0B592252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld */,
 				9AC0B595252F3BD100FD8AB7 /* Assets.xcassets */,
 			);
@@ -282,8 +304,10 @@
 				9AC0B5B1252F45BB00FD8AB7 /* FavouritesVC.swift in Sources */,
 				9A5522E42534718300486416 /* User.swift in Sources */,
 				9AC0B594252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld in Sources */,
+				9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */,
 				9AC0B58A252F3BCC00FD8AB7 /* AppDelegate.swift in Sources */,
 				9AC0B5B9252F81C300FD8AB7 /* String+Ext.swift in Sources */,
+				9A5522E72534943200486416 /* ErrorMessage.swift in Sources */,
 				9AC0B58C252F3BCC00FD8AB7 /* SceneDelegate.swift in Sources */,
 				9AC0B5BF25303DFA00FD8AB7 /* KGAlertVC.swift in Sources */,
 				9AC0B5B5252F565200FD8AB7 /* KGTextField.swift in Sources */,
