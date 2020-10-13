@@ -11,6 +11,8 @@
 		9A5522E42534718300486416 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E32534718300486416 /* User.swift */; };
 		9A5522E72534943200486416 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E62534943200486416 /* ErrorMessage.swift */; };
 		9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E925349BA800486416 /* NetworkManager.swift */; };
+		9A5522EE25358FF400486416 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522ED25358FF400486416 /* FollowerCell.swift */; };
+		9A5522F02535906E00486416 /* KGAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522EF2535906E00486416 /* KGAvatarImageView.swift */; };
 		9AC0B58A252F3BCC00FD8AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */; };
 		9AC0B58C252F3BCC00FD8AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */; };
 		9AC0B594252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B592252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld */; };
@@ -44,6 +46,8 @@
 		9A5522E32534718300486416 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A5522E62534943200486416 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		9A5522E925349BA800486416 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9A5522ED25358FF400486416 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		9A5522EF2535906E00486416 /* KGAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGAvatarImageView.swift; sourceTree = "<group>"; };
 		9AC0B586252F3BCC00FD8AB7 /* SHCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		9A5522EC25358FD000486416 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9A5522ED25358FF400486416 /* FollowerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9AC0B57D252F3BCC00FD8AB7 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +181,8 @@
 				9AC0B5BA25303BEE00FD8AB7 /* KGTitleLabel.swift */,
 				9AC0B5BC25303D4000FD8AB7 /* KGBodyLabel.swift */,
 				9AC0B5B4252F565200FD8AB7 /* KGTextField.swift */,
+				9A5522EF2535906E00486416 /* KGAvatarImageView.swift */,
+				9A5522EC25358FD000486416 /* Cells */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -296,6 +310,7 @@
 			files = (
 				9AC0B5BB25303BEE00FD8AB7 /* KGTitleLabel.swift in Sources */,
 				9A5522E2253470C100486416 /* Follower.swift in Sources */,
+				9A5522F02535906E00486416 /* KGAvatarImageView.swift in Sources */,
 				9AC0B5B7252F7B0900FD8AB7 /* FollowerListVC.swift in Sources */,
 				9AC0B5C12530478B00FD8AB7 /* UIViewController+Ext.swift in Sources */,
 				9AC0B5B3252F51BA00FD8AB7 /* KGButton.swift in Sources */,
@@ -305,6 +320,7 @@
 				9A5522E42534718300486416 /* User.swift in Sources */,
 				9AC0B594252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld in Sources */,
 				9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */,
+				9A5522EE25358FF400486416 /* FollowerCell.swift in Sources */,
 				9AC0B58A252F3BCC00FD8AB7 /* AppDelegate.swift in Sources */,
 				9AC0B5B9252F81C300FD8AB7 /* String+Ext.swift in Sources */,
 				9A5522E72534943200486416 /* ErrorMessage.swift in Sources */,
