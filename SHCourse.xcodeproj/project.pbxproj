@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A524E182538DC68001B53EA /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E172538DC68001B53EA /* Date+Ext.swift */; };
 		9A5522E2253470C100486416 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E1253470C100486416 /* Follower.swift */; };
 		9A5522E42534718300486416 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E32534718300486416 /* User.swift */; };
 		9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E925349BA800486416 /* NetworkManager.swift */; };
@@ -19,6 +20,10 @@
 		9A5523012537573300486416 /* KGUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5523002537573300486416 /* KGUserInfoHeaderVC.swift */; };
 		9A5523032537579900486416 /* KGSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5523022537579900486416 /* KGSecondaryTitleLabel.swift */; };
 		9A5523052538453100486416 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5523042538453100486416 /* Constants.swift */; };
+		9A5523072538727B00486416 /* KGItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5523062538727B00486416 /* KGItemInfoView.swift */; };
+		9A552309253878DA00486416 /* KGItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A552308253878DA00486416 /* KGItemInfoVC.swift */; };
+		9A55230B25387C2900486416 /* KGRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55230A25387C2900486416 /* KGRepoItemVC.swift */; };
+		9A6687BC25387E740032E972 /* KGFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6687BB25387E740032E972 /* KGFollowerItemVC.swift */; };
 		9AC0B58A252F3BCC00FD8AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */; };
 		9AC0B58C252F3BCC00FD8AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */; };
 		9AC0B594252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B592252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld */; };
@@ -48,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A524E172538DC68001B53EA /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		9A5522E1253470C100486416 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		9A5522E32534718300486416 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A5522E925349BA800486416 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -60,6 +66,10 @@
 		9A5523002537573300486416 /* KGUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		9A5523022537579900486416 /* KGSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		9A5523042538453100486416 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9A5523062538727B00486416 /* KGItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGItemInfoView.swift; sourceTree = "<group>"; };
+		9A552308253878DA00486416 /* KGItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGItemInfoVC.swift; sourceTree = "<group>"; };
+		9A55230A25387C2900486416 /* KGRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGRepoItemVC.swift; sourceTree = "<group>"; };
+		9A6687BB25387E740032E972 /* KGFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGFollowerItemVC.swift; sourceTree = "<group>"; };
 		9AC0B586252F3BCC00FD8AB7 /* SHCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +174,7 @@
 			children = (
 				9AC0B5BE25303DFA00FD8AB7 /* KGAlertVC.swift */,
 				9A5523002537573300486416 /* KGUserInfoHeaderVC.swift */,
+				9A6687BD25387EE80032E972 /* ItemInfoVCs */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,8 +193,19 @@
 			isa = PBXGroup;
 			children = (
 				9A5522FA2536D70E00486416 /* KGEmptyStateView.swift */,
+				9A5523062538727B00486416 /* KGItemInfoView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9A6687BD25387EE80032E972 /* ItemInfoVCs */ = {
+			isa = PBXGroup;
+			children = (
+				9A552308253878DA00486416 /* KGItemInfoVC.swift */,
+				9A55230A25387C2900486416 /* KGRepoItemVC.swift */,
+				9A6687BB25387E740032E972 /* KGFollowerItemVC.swift */,
+			);
+			path = ItemInfoVCs;
 			sourceTree = "<group>";
 		};
 		9AC0B57D252F3BCC00FD8AB7 = {
@@ -258,6 +280,7 @@
 			children = (
 				9AC0B5B8252F81C300FD8AB7 /* String+Ext.swift */,
 				9AC0B5C02530478B00FD8AB7 /* UIViewController+Ext.swift */,
+				9A524E172538DC68001B53EA /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,11 +398,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A5523052538453100486416 /* Constants.swift in Sources */,
+				9A5523072538727B00486416 /* KGItemInfoView.swift in Sources */,
+				9A552309253878DA00486416 /* KGItemInfoVC.swift in Sources */,
 				9AC0B5BB25303BEE00FD8AB7 /* KGTitleLabel.swift in Sources */,
 				9A5522E2253470C100486416 /* Follower.swift in Sources */,
 				9A5522F02535906E00486416 /* KGAvatarImageView.swift in Sources */,
 				9A5523012537573300486416 /* KGUserInfoHeaderVC.swift in Sources */,
+				9A55230B25387C2900486416 /* KGRepoItemVC.swift in Sources */,
 				9A5522F22535A3F700486416 /* UIHelper.swift in Sources */,
+				9A524E182538DC68001B53EA /* Date+Ext.swift in Sources */,
 				9AC0B5B7252F7B0900FD8AB7 /* FollowerListVC.swift in Sources */,
 				9AC0B5C12530478B00FD8AB7 /* UIViewController+Ext.swift in Sources */,
 				9AC0B5B3252F51BA00FD8AB7 /* KGButton.swift in Sources */,
@@ -389,6 +416,7 @@
 				9A5522E42534718300486416 /* User.swift in Sources */,
 				9AC0B594252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld in Sources */,
 				9A5522FB2536D70E00486416 /* KGEmptyStateView.swift in Sources */,
+				9A6687BC25387E740032E972 /* KGFollowerItemVC.swift in Sources */,
 				9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */,
 				9A5522EE25358FF400486416 /* FollowerCell.swift in Sources */,
 				9AC0B58A252F3BCC00FD8AB7 /* AppDelegate.swift in Sources */,
