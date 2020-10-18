@@ -1,17 +1,14 @@
 //
-//  KGAvatarImageView.swift
+//  KGAlertContainerView.swift
 //  SHCourse
 //
-//  Created by Karina on 10/13/20.
+//  Created by Karina on 10/18/20.
 //  Copyright © 2020 Karina. All rights reserved.
 //
 
 import UIKit
 
-class KGAvatarImageView: UIImageView {
-    
-    let cache = NetworkManager.shared.cache
-    let placeholderImage = UIImage(named: "avatar-placeholder")
+class KGAlertContainerView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,10 +22,11 @@ class KGAvatarImageView: UIImageView {
     
     
     private func configure() {
-        layer.cornerRadius  = 10
-        //check
-        clipsToBounds       = true
-        image               = placeholderImage
+        backgroundColor       = .systemBackground
+        layer.cornerRadius    = 16
+        layer.borderWidth     = 2
+        layer.borderColor     = UIColor.white.cgColor
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
 }

@@ -13,7 +13,7 @@ protocol  FollowerListVCDelegate: class {
     
 }
 
-class FollowerListVC: UIViewController, UISearchControllerDelegate {
+class FollowerListVC: KGDataLoadingVC {
     
     enum Section { case main }
     

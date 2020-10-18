@@ -11,6 +11,8 @@
 		9A524E1A253B052F001B53EA /* PersistenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E19253B052F001B53EA /* PersistenseManager.swift */; };
 		9A524E1C253B4F3C001B53EA /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E1B253B4F3C001B53EA /* FavouriteCell.swift */; };
 		9A524E1F253C2D6A001B53EA /* KGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E1E253C2D6A001B53EA /* KGTabBarController.swift */; };
+		9A524E21253CA44D001B53EA /* KGAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E20253CA44D001B53EA /* KGAlertContainerView.swift */; };
+		9A524E23253CB341001B53EA /* KGDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E22253CB341001B53EA /* KGDataLoadingVC.swift */; };
 		9A5522E2253470C100486416 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E1253470C100486416 /* Follower.swift */; };
 		9A5522E42534718300486416 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E32534718300486416 /* User.swift */; };
 		9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E925349BA800486416 /* NetworkManager.swift */; };
@@ -60,6 +62,8 @@
 		9A524E19253B052F001B53EA /* PersistenseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenseManager.swift; sourceTree = "<group>"; };
 		9A524E1B253B4F3C001B53EA /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
 		9A524E1E253C2D6A001B53EA /* KGTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTabBarController.swift; sourceTree = "<group>"; };
+		9A524E20253CA44D001B53EA /* KGAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGAlertContainerView.swift; sourceTree = "<group>"; };
+		9A524E22253CB341001B53EA /* KGDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGDataLoadingVC.swift; sourceTree = "<group>"; };
 		9A5522E1253470C100486416 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		9A5522E32534718300486416 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A5522E925349BA800486416 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 			children = (
 				9AC0B5BE25303DFA00FD8AB7 /* KGAlertVC.swift */,
 				9A5523002537573300486416 /* KGUserInfoHeaderVC.swift */,
+				9A524E22253CB341001B53EA /* KGDataLoadingVC.swift */,
 				9A6687BD25387EE80032E972 /* ItemInfoVCs */,
 			);
 			path = ViewControllers;
@@ -210,6 +215,7 @@
 			children = (
 				9A5522FA2536D70E00486416 /* KGEmptyStateView.swift */,
 				9A5523062538727B00486416 /* KGItemInfoView.swift */,
+				9A524E20253CA44D001B53EA /* KGAlertContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 				9A55230B25387C2900486416 /* KGRepoItemVC.swift in Sources */,
 				9A5522F22535A3F700486416 /* UIHelper.swift in Sources */,
 				9A524E182538DC68001B53EA /* Date+Ext.swift in Sources */,
+				9A524E23253CB341001B53EA /* KGDataLoadingVC.swift in Sources */,
 				9AC0B5B7252F7B0900FD8AB7 /* FollowerListVC.swift in Sources */,
 				9AC0B5C12530478B00FD8AB7 /* UIViewController+Ext.swift in Sources */,
 				9A524E1F253C2D6A001B53EA /* KGTabBarController.swift in Sources */,
@@ -437,6 +444,7 @@
 				9A5522FB2536D70E00486416 /* KGEmptyStateView.swift in Sources */,
 				9A524E1A253B052F001B53EA /* PersistenseManager.swift in Sources */,
 				9A6687BC25387E740032E972 /* KGFollowerItemVC.swift in Sources */,
+				9A524E21253CA44D001B53EA /* KGAlertContainerView.swift in Sources */,
 				9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */,
 				9A5522EE25358FF400486416 /* FollowerCell.swift in Sources */,
 				9AC0B58A252F3BCC00FD8AB7 /* AppDelegate.swift in Sources */,

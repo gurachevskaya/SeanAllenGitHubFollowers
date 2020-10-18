@@ -12,6 +12,7 @@ class KGTitleLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
     }
     
     
@@ -20,11 +21,10 @@ class KGTitleLabel: UILabel {
     }
     
     
-    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
-        super.init(frame: .zero)
+    convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+        self.init(frame: .zero)
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
-        configure()
     }
     
     
