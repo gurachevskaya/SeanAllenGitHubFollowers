@@ -46,6 +46,9 @@ class FollowerListVC: UIViewController, UISearchControllerDelegate {
     private func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
     
@@ -106,9 +109,35 @@ class FollowerListVC: UIViewController, UISearchControllerDelegate {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
-//        DispatchQueue.main.async {
-            self.dataSourse.apply(snapshot, animatingDifferences: true)
-//        }
+        //        DispatchQueue.main.async {
+        self.dataSourse.apply(snapshot, animatingDifferences: true)
+        //        }
+    }
+    
+    
+    @objc func addButtonTapped() {
+        showLoadingView()
+        
+        NetworkManager.shared.getUserInfo(for: username) {[weak self] result in
+            guard let self = self else { return }
+            self.dismissLoadingView()
+            switch result {
+            case .success(let user):
+                let favourite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                PersistenseManager.updateWith(favourite: favourite, actionType: .add) { [weak self] error in
+                    guard let self = self else { return }
+                    
+                    guard let error = error else {
+                        self.presentKGAlertOnMainThread(title: "Success", message: "You have successfully favourited this user 🥳", buttonTitle: "Hooray!")
+                        return
+                    }
+                    self.presentKGAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                }
+                
+            case .failure(let error):
+                self.presentKGAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+            }
+        }
     }
 }
 
