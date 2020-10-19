@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class KGItemInfoVC: UIViewController {
     
     let stackView = UIStackView()
@@ -16,7 +17,6 @@ class KGItemInfoVC: UIViewController {
     let actionButton = KGButton()
     
     var user: User!
-    weak var delegate: UserInfoVCDelegate!
     
     
     init(user: User) {
@@ -54,8 +54,7 @@ class KGItemInfoVC: UIViewController {
     
     
     private func layoutUI() {
-        view.addSubview(stackView)
-        view.addSubview(actionButton)
+        view.addSubviews(stackView, actionButton)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 20

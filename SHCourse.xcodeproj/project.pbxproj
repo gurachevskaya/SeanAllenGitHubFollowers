@@ -13,6 +13,7 @@
 		9A524E1F253C2D6A001B53EA /* KGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E1E253C2D6A001B53EA /* KGTabBarController.swift */; };
 		9A524E21253CA44D001B53EA /* KGAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E20253CA44D001B53EA /* KGAlertContainerView.swift */; };
 		9A524E23253CB341001B53EA /* KGDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E22253CB341001B53EA /* KGDataLoadingVC.swift */; };
+		9A524E25253D7ABD001B53EA /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A524E24253D7ABD001B53EA /* UIView+Ext.swift */; };
 		9A5522E2253470C100486416 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E1253470C100486416 /* Follower.swift */; };
 		9A5522E42534718300486416 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E32534718300486416 /* User.swift */; };
 		9A5522EA25349BA800486416 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5522E925349BA800486416 /* NetworkManager.swift */; };
@@ -64,6 +65,7 @@
 		9A524E1E253C2D6A001B53EA /* KGTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTabBarController.swift; sourceTree = "<group>"; };
 		9A524E20253CA44D001B53EA /* KGAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGAlertContainerView.swift; sourceTree = "<group>"; };
 		9A524E22253CB341001B53EA /* KGDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGDataLoadingVC.swift; sourceTree = "<group>"; };
+		9A524E24253D7ABD001B53EA /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		9A5522E1253470C100486416 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		9A5522E32534718300486416 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9A5522E925349BA800486416 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				9A5522E925349BA800486416 /* NetworkManager.swift */,
+				9A524E24253D7ABD001B53EA /* UIView+Ext.swift */,
 				9A524E19253B052F001B53EA /* PersistenseManager.swift */,
 			);
 			path = Managers;
@@ -452,6 +455,7 @@
 				9A5523032537579900486416 /* KGSecondaryTitleLabel.swift in Sources */,
 				9AC0B58C252F3BCC00FD8AB7 /* SceneDelegate.swift in Sources */,
 				9A5522FF253754CC00486416 /* KGError.swift in Sources */,
+				9A524E25253D7ABD001B53EA /* UIView+Ext.swift in Sources */,
 				9AC0B5BF25303DFA00FD8AB7 /* KGAlertVC.swift in Sources */,
 				9AC0B5B5252F565200FD8AB7 /* KGTextField.swift in Sources */,
 				9A5522FD253749F000486416 /* UserInfoVC.swift in Sources */,

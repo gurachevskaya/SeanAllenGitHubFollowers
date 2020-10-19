@@ -8,7 +8,25 @@
 
 import UIKit
 
+protocol KGFollowerItemVCDelegate: class {
+    func didTapGetFollowers(for user: User)
+}
+
 class KGFollowerItemVC: KGItemInfoVC {
+    
+    weak var delegate: KGFollowerItemVCDelegate!
+    
+    
+    init(user: User, delegate: KGFollowerItemVCDelegate) {
+        super.init(user: user)
+        self.delegate = delegate
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
