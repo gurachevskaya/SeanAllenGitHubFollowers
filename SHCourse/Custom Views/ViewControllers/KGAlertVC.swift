@@ -39,6 +39,7 @@ class KGAlertVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         view.addSubviews(containerView, titleLabel, actionButton, messageLabel)
+        
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
@@ -47,7 +48,6 @@ class KGAlertVC: UIViewController {
     
     
     private func configureContainerView() {
-        
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -98,5 +98,4 @@ class KGAlertVC: UIViewController {
     @objc func dismissVC() {
         dismiss(animated: true)
     }
-
 }

@@ -15,6 +15,7 @@ class NetworkManager {
     
     private init() {}
     
+    
     func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], KGError>) -> Void) {
         let endpoint = baseUrl + "\(username)/followers?per_page=100&page=\(page)"
         
@@ -46,7 +47,8 @@ class NetworkManager {
             } catch {
                 completed(.failure(.invalidData))
             }
-        }    
+        }
+        
         task.resume()
     }
     
@@ -84,12 +86,12 @@ class NetworkManager {
                 completed(.failure(.invalidData))
             }
         }
+        
         task.resume()
     }
     
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
-        
         let cacheKey = NSString(string: urlString)
         
         if let image = cache.object(forKey: cacheKey) {

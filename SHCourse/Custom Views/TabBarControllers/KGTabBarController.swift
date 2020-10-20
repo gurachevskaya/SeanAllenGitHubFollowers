@@ -18,8 +18,8 @@ class KGTabBarController: UITabBarController {
 
     
     func createSearchNC() -> UINavigationController {
-        let searchVC = SearchVC()
-        searchVC.title = "Search"
+        let searchVC        = SearchVC()
+        searchVC.title      = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
         return UINavigationController(rootViewController: searchVC)
@@ -27,8 +27,8 @@ class KGTabBarController: UITabBarController {
     
     
     func createFavouritesNC() -> UINavigationController {
-        let favouritesVC = FavouritesVC()
-        favouritesVC.title = "Favourites"
+        let favouritesVC        = FavouritesVC()
+        favouritesVC.title      = "Favourites"
         favouritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         
         return UINavigationController(rootViewController: favouritesVC)

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class KGItemInfoVC: UIViewController {
     
     let stackView = UIStackView()

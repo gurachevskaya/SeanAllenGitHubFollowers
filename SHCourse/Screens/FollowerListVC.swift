@@ -8,18 +8,17 @@
 
 import UIKit
 
-
 class FollowerListVC: KGDataLoadingVC {
     
     enum Section { case main }
     
     var username: String!
-    var followers: [Follower] = []
-    var filteredFollowers: [Follower] = []
-    var page = 1
-    var hasMoreFollowers = true
-    var isSearching = false
-    var isLoadingMoreFollowers = false
+    var followers: [Follower]           = []
+    var filteredFollowers: [Follower]   = []
+    var page                            = 1
+    var hasMoreFollowers                = true
+    var isSearching                     = false
+    var isLoadingMoreFollowers          = false
     
     var collectionView: UICollectionView!
     var dataSourse: UICollectionViewDiffableDataSource<Section, Follower>!
@@ -71,7 +70,7 @@ class FollowerListVC: KGDataLoadingVC {
     }
     
     
-    func configureSearchController() {
+    private func configureSearchController() {
         let searchController                                    = UISearchController()
         searchController.searchResultsUpdater                   = self
         searchController.searchBar.placeholder                  = "Search for a username"
@@ -82,26 +81,35 @@ class FollowerListVC: KGDataLoadingVC {
     
     private func getFollowers(username: String, page: Int) {
         showLoadingView()
+        isLoadingMoreFollowers = true
+        
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
             
             switch result {
             case .success(let followers):
-                if followers.count < 100 { self.hasMoreFollowers = false}
-                self.followers.append(contentsOf: followers)
+                self.updateUI(with: followers)
                 
-                if self.followers.isEmpty {
-                    let message = "This user doesn't have any followers 🙁"
-                    DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
-                    return
-                }
-                self.updateData(on: followers)
-               
             case .failure(let error):
                 self.presentKGAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "Ok")
             }
+            self.isLoadingMoreFollowers = false
         }
+    }
+    
+    
+    private func updateUI(with followers: [Follower]) {
+        if followers.count < 100 { hasMoreFollowers = false }
+        self.followers.append(contentsOf: followers)
+        
+        if self.followers.isEmpty {
+            let message = "This user doesn't have any followers 🙁"
+            DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
+            return
+        }
+        
+        updateData(on: self.followers)
     }
     
     
@@ -118,36 +126,40 @@ class FollowerListVC: KGDataLoadingVC {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
-        //        DispatchQueue.main.async {
         self.dataSourse.apply(snapshot, animatingDifferences: true)
-        //        }
     }
     
     
     @objc func addButtonTapped() {
         showLoadingView()
-        isLoadingMoreFollowers = true
         
         NetworkManager.shared.getUserInfo(for: username) {[weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
+            
             switch result {
             case .success(let user):
-                let favourite = Follower(login: user.login, avatarUrl: user.avatarUrl)
-                PersistenseManager.updateWith(favourite: favourite, actionType: .add) { [weak self] error in
-                    guard let self = self else { return }
-                    
-                    guard let error = error else {
-                        self.presentKGAlertOnMainThread(title: "Success", message: "You have successfully favourited this user 🥳", buttonTitle: "Hooray!")
-                        return
-                    }
-                    self.presentKGAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
-                }
+                self.addUserToFavourites(user: user)
                 
             case .failure(let error):
                 self.presentKGAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
-            self.isLoadingMoreFollowers = false
+        }
+    }
+    
+    
+    private func addUserToFavourites(user: User) {
+        let favourite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+        
+        PersistenseManager.updateWith(favourite: favourite, actionType: .add) { [weak self] error in
+            guard let self = self else { return }
+            
+            guard let error = error else {
+                self.presentKGAlertOnMainThread(title: "Success", message: "You have successfully favourited this user 🥳", buttonTitle: "Hooray!")
+                return
+            }
+            
+            self.presentKGAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
         }
     }
 }
@@ -204,6 +216,7 @@ extension FollowerListVC: UserInfoVCDelegate {
         self.username   = username
         title           = username
         page            = 1
+        
         followers.removeAll()
         filteredFollowers.removeAll()
         collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)

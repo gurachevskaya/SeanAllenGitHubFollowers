@@ -35,5 +35,4 @@ class KGTitleLabel: UILabel {
         lineBreakMode               = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

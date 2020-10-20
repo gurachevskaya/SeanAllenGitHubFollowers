@@ -10,9 +10,9 @@ import UIKit
 
 class FavouriteCell: UITableViewCell {
 
-    static let reuseID = "FollowerCell"
+    static let reuseID  = "FollowerCell"
     let avatarImageView = KGAvatarImageView(frame: .zero)
-    let usernameLabel = KGTitleLabel(textAlignment: .left, fontSize: 26)
+    let usernameLabel   = KGTitleLabel(textAlignment: .left, fontSize: 26)
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -28,16 +28,12 @@ class FavouriteCell: UITableViewCell {
     
     func set(favourite: Follower) {
         usernameLabel.text = favourite.login
-        NetworkManager.shared.downloadImage(from: favourite.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async { self.avatarImageView.image = image }
-        }
+        avatarImageView.downloadImage(fromURL: favourite.avatarUrl)
     }
     
     
     private func configure() {
         addSubviews(avatarImageView, usernameLabel)
-        
         accessoryType           = .disclosureIndicator
         let padding:CGFloat     = 12
         

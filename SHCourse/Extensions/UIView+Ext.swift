@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 extension UIView {
     
     func pinToEdges(of superview: UIView) {

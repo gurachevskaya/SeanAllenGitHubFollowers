@@ -12,6 +12,7 @@ class FavouritesVC: KGDataLoadingVC {
     
     let tableView = UITableView()
     var favourites: [Follower] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,19 +51,23 @@ class FavouritesVC: KGDataLoadingVC {
             guard let self = self else { return }
             switch result {
             case .success(let favourites):
-                
-                if favourites.isEmpty {
-                    self.showEmptyStateView(with: "No favourites\nAdd one on the follower screen.", in: self.view)
-                } else {
-                    self.favourites = favourites
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
-                }
+                self.updateUI(with: favourites)
                 
             case .failure(let error):
                 self.presentKGAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+            }
+        }
+    }
+    
+    
+    private func updateUI(with favourites: [Follower]) {
+        if favourites.isEmpty {
+            showEmptyStateView(with: "No favourites\nAdd one on the follower screen.", in: self.view)
+        } else {
+            self.favourites = favourites
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.view.bringSubviewToFront(self.tableView)
             }
         }
     }

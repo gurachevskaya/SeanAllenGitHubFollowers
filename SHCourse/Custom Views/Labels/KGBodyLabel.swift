@@ -36,6 +36,4 @@ class KGBodyLabel: UILabel {
         lineBreakMode                       = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
-
 }

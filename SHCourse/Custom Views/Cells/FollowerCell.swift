@@ -9,9 +9,10 @@
 import UIKit
 
 class FollowerCell: UICollectionViewCell {
-    static let reuseID = "FollowerCell"
+    
+    static let reuseID  = "FollowerCell"
     let avatarImageView = KGAvatarImageView(frame: .zero)
-    let usernameLabel = KGTitleLabel(textAlignment: .center, fontSize: 16)
+    let usernameLabel   = KGTitleLabel(textAlignment: .center, fontSize: 16)
     
     
     override init(frame: CGRect) {
@@ -27,16 +28,12 @@ class FollowerCell: UICollectionViewCell {
     
     func set(follower: Follower) {
         usernameLabel.text = follower.login
-        NetworkManager.shared.downloadImage(from: follower.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async { self.avatarImageView.image = image }
-        }
+        avatarImageView.downloadImage(fromURL: follower.avatarUrl)
     }
     
     
     private func configure() {
         addSubviews(avatarImageView, usernameLabel)
-        
         let padding: CGFloat = 8
         
         NSLayoutConstraint.activate([
@@ -50,6 +47,5 @@ class FollowerCell: UICollectionViewCell {
             usernameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             usernameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
-        
     }
 }

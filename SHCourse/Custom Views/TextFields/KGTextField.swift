@@ -35,12 +35,10 @@ class KGTextField: UITextField {
         adjustsFontSizeToFitWidth   = true
         minimumFontSize             = 12
         
-        //check
         backgroundColor             = .tertiarySystemBackground
         autocorrectionType          = .no
         returnKeyType               = .go
         clearButtonMode             = .whileEditing
         placeholder                 = "Enter a username"
     }
-    
 }

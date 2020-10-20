@@ -12,16 +12,15 @@ protocol  UserInfoVCDelegate: class {
     func didRequestFollowers(for username: String)
 }
 
-
 class UserInfoVC: UIViewController {
     
-    let scrollView = UIScrollView()
-    let contentView = UIView()
+    let scrollView          = UIScrollView()
+    let contentView         = UIView()
     
-    let headerView = UIView()
-    let itemViewOne = UIView()
-    let itemViewTwo = UIView()
-    let dateLabel = KGBodyLabel(textAlignment: .center)
+    let headerView          = UIView()
+    let itemViewOne         = UIView()
+    let itemViewTwo         = UIView()
+    let dateLabel           = KGBodyLabel(textAlignment: .center)
     var itemViews: [UIView] = []
     
     var username: String!
@@ -80,7 +79,7 @@ class UserInfoVC: UIViewController {
     
     
     func layoutUI() {
-        let padding: CGFloat = 20
+        let padding: CGFloat    = 20
         let itemHeight: CGFloat = 140
         
         itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
@@ -117,6 +116,7 @@ class UserInfoVC: UIViewController {
         childVC.view.frame = containerView.bounds
         childVC.didMove(toParent: self)
     }
+    
     
     @objc func dismissVC() {
         dismiss(animated: true)
