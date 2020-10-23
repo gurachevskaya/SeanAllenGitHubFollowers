@@ -31,6 +31,11 @@
 		9A552309253878DA00486416 /* KGItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A552308253878DA00486416 /* KGItemInfoVC.swift */; };
 		9A55230B25387C2900486416 /* KGRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55230A25387C2900486416 /* KGRepoItemVC.swift */; };
 		9A6687BC25387E740032E972 /* KGFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6687BB25387E740032E972 /* KGFollowerItemVC.swift */; };
+		9A92E48525431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.27.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A92E48025431EC800E39D1B /* Снимок экрана 2020-10-23 в 17.22.27.png */; };
+		9A92E48625431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.33.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A92E48125431EC800E39D1B /* Снимок экрана 2020-10-23 в 17.22.33.png */; };
+		9A92E48725431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.08.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A92E48225431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.08.png */; };
+		9A92E48825431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.38.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A92E48325431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.38.png */; };
+		9A92E48925431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.46.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A92E48425431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.46.png */; };
 		9AC0B58A252F3BCC00FD8AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */; };
 		9AC0B58C252F3BCC00FD8AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */; };
 		9AC0B594252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0B592252F3BCC00FD8AB7 /* SHCourse.xcdatamodeld */; };
@@ -84,6 +89,11 @@
 		9A552308253878DA00486416 /* KGItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGItemInfoVC.swift; sourceTree = "<group>"; };
 		9A55230A25387C2900486416 /* KGRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGRepoItemVC.swift; sourceTree = "<group>"; };
 		9A6687BB25387E740032E972 /* KGFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGFollowerItemVC.swift; sourceTree = "<group>"; };
+		9A92E48025431EC800E39D1B /* Снимок экрана 2020-10-23 в 17.22.27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2020-10-23 в 17.22.27.png"; sourceTree = "<group>"; };
+		9A92E48125431EC800E39D1B /* Снимок экрана 2020-10-23 в 17.22.33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2020-10-23 в 17.22.33.png"; sourceTree = "<group>"; };
+		9A92E48225431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2020-10-23 в 17.22.08.png"; sourceTree = "<group>"; };
+		9A92E48325431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2020-10-23 в 17.21.38.png"; sourceTree = "<group>"; };
+		9A92E48425431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2020-10-23 в 17.21.46.png"; sourceTree = "<group>"; };
 		9AC0B586252F3BCC00FD8AB7 /* SHCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC0B589252F3BCC00FD8AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC0B58B252F3BCC00FD8AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +244,18 @@
 			path = ItemInfoVCs;
 			sourceTree = "<group>";
 		};
+		9A92E47F25431E0000E39D1B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9A92E48325431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.38.png */,
+				9A92E48425431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.46.png */,
+				9A92E48225431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.08.png */,
+				9A92E48025431EC800E39D1B /* Снимок экрана 2020-10-23 в 17.22.27.png */,
+				9A92E48125431EC800E39D1B /* Снимок экрана 2020-10-23 в 17.22.33.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		9AC0B57D252F3BCC00FD8AB7 = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +284,7 @@
 				9AC0B5C325304C8C00FD8AB7 /* Custom Views */,
 				9AC0B5C225304C4700FD8AB7 /* Screens */,
 				9AC0B5C525304D1A00FD8AB7 /* Support */,
+				9A92E47F25431E0000E39D1B /* Images */,
 				9AC0B59A252F3BD100FD8AB7 /* Info.plist */,
 			);
 			path = SHCourse;
@@ -407,8 +430,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A92E48925431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.46.png in Resources */,
+				9A92E48625431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.33.png in Resources */,
 				9AC0B599252F3BD100FD8AB7 /* LaunchScreen.storyboard in Resources */,
+				9A92E48825431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.21.38.png in Resources */,
 				9AC0B596252F3BD100FD8AB7 /* Assets.xcassets in Resources */,
+				9A92E48525431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.27.png in Resources */,
+				9A92E48725431EC900E39D1B /* Снимок экрана 2020-10-23 в 17.22.08.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
